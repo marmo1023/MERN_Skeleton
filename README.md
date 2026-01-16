@@ -6,6 +6,33 @@ A simple multiplayer Tic-Tac-Toe game built with the MERN stack (MongoDB, Expres
 - Node.js (v14 or higher)
 - npm or yarn
 
+## Initial Setup
+in terminal in visual studio:
+
+backend:
+	npm init -y
+	npm install mongodb express cors dotenv
+
+optional:
+	express-session: Server-side session management
+	connect-mongo: Store sessions in MongoDB
+	socket.io: Real-time server communication
+	socket.io-client: Real-time client communication
+
+frontend:
+	npx create-react-app frontend
+    
+optional:
+	react: Build UI components
+	react-dom: Render React into the browser
+	react-scripts: Build + dev tooling
+	react-router-dom: Navigation between pages
+	bootstrap: Styling + layout
+
+	"start":"node index.js"
+if using react, add this to package.json to make auto run under scripts:
+	"start": "react-scripts start"
+
 ## Installation
 Clone the repository:
    git clone <repository-url>

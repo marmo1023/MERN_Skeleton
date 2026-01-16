@@ -1,0 +1,219 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  text-align: center;
+}
+
+/* Button styles */
+button {
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Label and input styles */
+label {
+  display: inline-block;
+  margin: 12px 16px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Game container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Tic-tac-toe board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+.cell.occupied {
+  cursor: default;
+}
+
+.cell.occupied:hover {
+  background-color: white;
+}
+
+/* Game info */
+.game-info {
+  margin-bottom: 20px;
+}
+
+.winner {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* Organizer for start page */
+.organizer {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Textbox input */
+.textbox {
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+/* Main container for start page */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: auto;
+}
+
+/* Navigation styles */
+.nav {
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.refresh-btn {
+  margin-left: 10px;
+}
+
+/* History page styles */
+.history-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.history-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.history-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.game-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.history-players {
+  margin-bottom: 15px;
+}
+
+.history-players p {
+  margin: 5px 0;
+}
+
+/* Mini board for history */
+.mini-board {
+  display: inline-block;
+  border: 1px solid #333;
+  background-color: #f9f9f9;
+}
+
+.mini-row {
+  display: flex;
+}
+
+.mini-cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: white;
+}

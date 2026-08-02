@@ -1,69 +1,75 @@
-# Tic-Tac-Toe MERN Skeleton
+## Tic-Tac-Toe MERN Skeleton
+A lightweight multiplayer Tic-Tac-Toe application built using the MERN stack (MongoDB, Express, React, Node.js) with Socket.IO enabling real-time gameplay.
 
-A simple multiplayer Tic-Tac-Toe game built with the MERN stack (MongoDB, Express, React, Node.js) and Socket.IO for real-time updates
+Prerequisites
+Node.js (version 14 or higher)
 
-## Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
+npm or yarn
 
-## Initial Setup
-in terminal in visual studio:
+# Initial Setup
+Run the following commands in your terminal:
 
-backend:
-	npm init -y
-	npm install mongodb express cors dotenv
+Backend:
+npm init -y
+npm install mongodb express cors dotenv
 
-optional:
-	express-session: Server-side session management
-	connect-mongo: Store sessions in MongoDB
-	socket.io: Real-time server communication
-	socket.io-client: Real-time client communication
+Optional backend packages:
+express-session – server-side session management
+connect-mongo – store sessions in MongoDB
+socket.io – real-time server communication
+socket.io-client – real-time client communication
 
-frontend:
-	npx create-react-app frontend
-    
-optional:
-	react: Build UI components
-	react-dom: Render React into the browser
-	react-scripts: Build + dev tooling
-	react-router-dom: Navigation between pages
-	bootstrap: Styling + layout
+Frontend:
+npx create-react-app frontend
 
-	"start":"node index.js"
-if using react, add this to package.json to make auto run under scripts:
-	"start": "react-scripts start"
+Optional frontend packages:
+react – UI components
+react-dom – rendering React in the browser
+react-scripts – build and development tooling
+react-router-dom – page navigation
+bootstrap – styling and layout
 
-## Installation
+If using React, add this to package.json under “scripts” to enable auto-run:
+"start": "react-scripts start"
+
+For a plain Node backend:
+"start": "node index.js"
+
+# Installation
 Clone the repository:
-   git clone <repository-url>
-   cd MERN_Skeleton
+git clone <repository-url>
+cd MERN_Skeleton
 
 Install backend dependencies:
-   cd backend
-   npm install
+cd backend
+npm install
 
 Install frontend dependencies:
-   cd frontend
-   npm install
+cd frontend
+npm install
 
-## Running the Application
+# Running the Application
 Start the backend server:
-   cd backend
-   npm start
-
-   The server will run on http://localhost:5000
+cd backend
+npm start
+The backend will run at http://localhost:5000
 
 Start the frontend:
-   cd frontend
-   npm start
+cd frontend
+npm start
+The frontend will open at http://localhost:3000
 
-   The app will open in your browser at http://localhost:3000
+# How to Play
+Enter your name and choose to create a new game or join an existing one.
+Share the generated game ID with your opponent.
+Take turns clicking on the board to place your X or O.
+The game automatically detects wins and draws.
 
-## How to Play
-1. Enter your name and choose to create a new game or join an existing one.
-2. Share the game ID with your opponent to join.
-3. Take turns clicking on the board to place your X or O.
-4. The game detects wins and draws automatically.
+# API Endpoints
+POST /api/games/create – Create a new game
+POST /api/games/join – Join an existing game
+POST /api/games/move – Make a move
+GET /api/games/:gameId – Retrieve the current game state
 
 ## API Endpoints
 `POST /api/games/create` - Create a new game
